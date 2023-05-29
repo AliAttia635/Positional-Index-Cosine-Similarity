@@ -1,1 +1,1 @@
-# CosineSimilarity-For-Inverted-Index
+# CosineSimilarity-For-Positional-Index
