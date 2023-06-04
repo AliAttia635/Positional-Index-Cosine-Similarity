@@ -1,1 +1,1 @@
-# CosineSimilarity-For-Positional-Index
+this Code reads 10 text files, build Positional index for them ,Take user query "group of words",calculate their cosine similarity between the query and each file, calculate the TF-IDF for each word in the query, And additional feature which is webcrawling any url,which allowing me to extract data from the url and store it in files
