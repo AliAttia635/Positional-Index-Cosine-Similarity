@@ -28,21 +28,14 @@ public class WebCrawler {
     private void crawlPage(String url) {
         if (!links.contains(url) && linkCounter < 10) {
             try {
-                // Add the URL to the index
                 links.add(url);
                 linkCounter++;
                 System.out.println(url);
 
-                // Fetch the HTML code
                 Document document = Jsoup.connect(url).get();
-
-                // Save the data to a file
                 saveDataToFile(url, document.html());
-
-                // Parse the HTML to extract links
                 Elements linksOnPage = document.select("a[href]");
 
-                // For each extracted URL, go back to crawlPage
                 for (Element page : linksOnPage) {
                     if (linkCounter < 10) {
                         String extractedUrl = page.attr("abs:href");
